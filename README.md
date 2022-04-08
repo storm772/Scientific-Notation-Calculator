@@ -2,6 +2,6 @@
 #### Not using calcs, but yes, strings
 
 #### TODO:
-[X] Accept Integer
-[ ] Accept Decimals
+- [X] Accept Integers
+- [ ] Accept Decimals
 
