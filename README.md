@@ -4,7 +4,7 @@
 #### TODO:
 - [X] Fix Scientific Notations
 - [X] Accept fixing integers Notations
-- [ ] Accept fixing decimal Notations
+- [X] Accept fixing decimal Notations
 - [ ] Convert to Scientific Notations
 - [ ] Accept Decimals
 
