@@ -7,6 +7,7 @@ def calc(n):
 
     if '10^' in n: isAlready = True
 
+    # Check if its already a scientific notation
     if isAlready:
         found = 0
         decimal = False
@@ -22,6 +23,7 @@ def calc(n):
 
                 print(f'{number}x10^{len(found.split(".")[1]) + exponent}')
             else:
+                # if its a single number, like (1000 or 90000000)
                 zeroCount = 0
                 for i in target:
                     if i == '0':
