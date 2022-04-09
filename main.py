@@ -66,4 +66,15 @@ def calc(n):
                     break
             print(f'{number}x10^{zeroCount}')
             
-calc('0 00,0  .5')
+        elif n[0] != '0':
+            number = n#.rstrip('0')
+            if int(number) > 10:
+                number = number[:1] + '.' + number[1:]
+            zeroCount = len(number.split('.')[1])
+            print(f'{number.rstrip("0")}x10^{zeroCount}')
+            #   check = input('Do you want to check if its correct?\n~> ')
+            #   if check == 'yes':
+            #       checkValue = float(number.rstrip("0"))*10**int(zeroCount)
+            #       print(f'Requested: {n}\nResult: {str(checkValue).replace(".0", "")}\nIdentical: {int(n) == checkValue}')
+            
+calc('545550000')
