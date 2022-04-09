@@ -15,7 +15,7 @@ def calc(n):
 
             found = target.lstrip('0')
 
-            if int(found) > 10:
+            if int(found) > 10: 
                 found = found[:1] + '.' + found[1:]
             print(f'{found}x10^{zeroCount + exponent}')
             
@@ -27,14 +27,16 @@ def calc(n):
                 found = target[:1] + '.' + target[1:]
 
                 print(f'{number}x10^{len(found.split(".")[1]) + exponent}')
-            else:
+            elif int(found) < 10 and len(target) > 1:
                 zeroCount = 0
                 for i in target:
                     if i == '0': zeroCount += 1
                     if i != '0': break
                 
                 print(f'{target.split("0")[0]}x10^{zeroCount}')
-    
+            else:
+                raise ArithmeticError('Already converted')
+
     # Scientific Notation Converter
     if '10^' not in n: 
         n = n.replace(' ','').replace(',','').replace('.','')
@@ -59,4 +61,4 @@ def calc(n):
         else:
             print('Invalid Operation')
 
-calc('0.000003367')
+calc('00012')
