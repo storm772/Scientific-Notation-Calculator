@@ -12,7 +12,8 @@
 ##### PROJECT CONCLUDED!
 
 
-##### Tests
+### Tests
+```
 FIXER
 ---------
 00012x10^8 = 1.2x10^5  ( CORRECT )
@@ -26,5 +27,5 @@ CONVERTER
 RESULTS
 -------
 Test Passed (4/4)
-
+```
 
