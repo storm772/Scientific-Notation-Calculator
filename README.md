@@ -5,6 +5,6 @@
 - [X] Fix Scientific Notations
 - [X] Accept fixing integers Notations
 - [X] Accept fixing decimal Notations
-- [ ] Convert to Scientific Notations
-- [ ] Accept Decimals
-
+- [X] Convert to Scientific Notations
+- [X] Accept Decimals
+- [ ] Accept Integers
