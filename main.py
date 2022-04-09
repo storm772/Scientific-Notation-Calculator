@@ -1,14 +1,14 @@
 # Main function
 def calc(n):
-    target = n.split('x')[0].replace(',','')
-    exponent = int(n.split('^')[1])
-    
     isAlready = False
 
-    if '10^' in n: isAlready = True
-
+    if '10^' in n:
+        isAlready = True
     # Scientific Notation Fixer
     if isAlready:
+        target = n.split('x')[0].replace(',','')
+        exponent = int(n.split('^')[1])
+        
         found = 0
         decimal = False
         
@@ -45,5 +45,25 @@ def calc(n):
                         zeroCount +=1
                 else:
                     print(f'{target.split("0")[0]}x10^{zeroCount}')
-                
-calc('0,00054535432x10^-3')
+    else:
+        if ',' in n:
+            n = n.replace(',','')
+        if '.' in n:
+            n = n.replace('.','')
+        if ' ' in n:
+            n = n.replace(' ','')
+            
+        # Convert To Scientific Notation
+        if n[0] == '0':
+            zeroCount = 0
+            number = n.lstrip('0')
+            if int(number) > 10:
+                number = number[:1] + '.' + number[1:]
+            for i in n:
+                if i == '0':
+                    zeroCount += 1
+                if i != '0':
+                    break
+            print(f'{number}x10^{zeroCount}')
+            
+calc('0 00,0  .5')
