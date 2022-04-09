@@ -9,17 +9,17 @@ def calc(n):
         # Decimal System
         if target[0] == '0': 
             zeroCount = 0
-            found = target.lstrip('0')
-            if int(found) > 10:
-                number = found[:1] + '.' + found[1:]
-                found = target[:1] + '.' + target[1:]
-                
             for i in target:
-                if i == '0':
-                    zeroCount -=1
-            print(f'{number}x10^{exponent + zeroCount}')
-        else: 
+                if i == '0': zeroCount -= 1
+                if i != '0': break
 
+            found = target.lstrip('0')
+
+            if int(found) > 10:
+                found = found[:1] + '.' + found[1:]
+            print(f'{found}x10^{zeroCount + exponent}')
+            
+        else: 
         # Integer System
             found = target.rstrip('0')
             if int(found) > 10:
@@ -46,7 +46,7 @@ def calc(n):
             if int(number) > 10:
                 number = number[:1] + '.' + number[1:]
             for i in n:
-                if i == '0': zeroCount += 1
+                if i == '0': zeroCount -= 1
                 if i != '0': break
 
             print(f'{number}x10^{zeroCount}')
@@ -59,4 +59,4 @@ def calc(n):
         else:
             print('Invalid Operation')
 
-calc('15x10^-3')
+calc('0.000003367')
