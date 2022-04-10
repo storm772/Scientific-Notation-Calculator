@@ -16,13 +16,13 @@
 ```
 FIXER
 ---------
-00012x10^8 = 1.2x10^5  ( CORRECT )
-12000x10^8 = 1.2x10^12 ( CORRECT )
+6900x10^3  = 6.9x10^6  ( CORRECT )
+0.069x10^3 = 6.9x10^1  ( CORRECT )
 
 CONVERTER
 ---------
-12000 = 1.2x10^4  ( CORRECT )
-00012 = 1.2x10^-3 ( CORRECT )
+6900  = 6.9x10^3  ( CORRECT )
+0.069 = 6.9x10^-2 ( CORRECT )
 
 RESULTS
 -------
